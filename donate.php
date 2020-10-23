@@ -13,7 +13,9 @@
     <link rel="manifest" href="assets/images/favicons/site.webmanifest">
 
     <!-- Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
     <!-- Css-->
 
@@ -40,36 +42,36 @@
 
 </head>
 <style type="text/css">
-    .owl-nav {
-        display: none;
-    }
+.owl-nav {
+    display: none;
+}
 
-    .desk_hide {
-        display: none;
-    }
+.desk_hide {
+    display: none;
+}
 
-    @media only screen and (max-width: 767px) {
-        .mob_hide {
-            display: none !important;
-        }
+@media only screen and (max-width: 767px) {
+    .mob_hide {
+        display: none !important;
     }
+}
 
-    /*new*/
-    h3 {
-        font-size: 24px !important;
-    }
+/*new*/
+h3 {
+    font-size: 24px !important;
+}
 
-    p {
-        color: #72523f;
-    }
+p {
+    color: #72523f;
+}
 
-    .red {
-        color: #d62444 !important;
-    }
+.red {
+    color: #d62444 !important;
+}
 
-    .white {
-        color: white !important;
-    }
+.white {
+    color: white !important;
+}
 </style>
 
 
@@ -84,10 +86,10 @@
 
 
 <style type="text/css">
-    /*custom radio*/
-    .hide {
-        display: none;
-    }
+/*custom radio*/
+.hide {
+    display: none;
+}
 </style>
 
 
@@ -116,7 +118,8 @@
                 <div class="topbar_bg" style="background-image: url(assets/images/shapes/header-bg.png)"></div>
                 <div class="container mob_hide">
                     <div class="topbar-one__left">
-                        <a href="mailto:sreekollapuriamman@gmail.com"><span class="icon-message"></span>sreekollapuriamman@gmail.com</a>
+                        <a href="mailto:sreekollapuriamman@gmail.com"><span
+                                class="icon-message"></span>sreekollapuriamman@gmail.com</a>
                         <!-- <a href="tel:666-999-0000"><span class="icon-phone-call"></span>666 888 0000</a> -->
                     </div>
                     <div class="topbar-one__middle">
@@ -199,7 +202,8 @@
                 <div class="block-title text-center title-boxs">
 
                     <h3 class="red" style="padding-bottom: 10px;">Contribute</h3>
-                    <p>IS A GREATEST ACHIEVEMENT AND AN ASSET OF HINDU COMMUNITY IN THE AREA. YOUR CONTRIBUTION HELPS THE ORGANIZATION TO SERVE OUR COMMUNITY BETTER. PLEASE TAKE THE STEP TODAY.</p>
+                    <p>IS A GREATEST ACHIEVEMENT AND AN ASSET OF HINDU COMMUNITY IN THE AREA. YOUR CONTRIBUTION HELPS
+                        THE ORGANIZATION TO SERVE OUR COMMUNITY BETTER. PLEASE TAKE THE STEP TODAY.</p>
                     <div class="leaf">
                         <img src="assets/images/resources/leaf.png" alt="">
                     </div>
@@ -211,8 +215,11 @@
                             <div id="left_form">
                                 <!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
                                 <h2>Donation</h2>
-                                <p style="color: white;">IS A GREATEST ACHIEVEMENT AND AN ASSET OF HINDU COMMUNITY IN THE AREA. YOUR CONTRIBUTION HELPS THE ORGANIZATION TO SERVE OUR COMMUNITY BETTER. PLEASE TAKE THE STEP TODAY.</p>
-                                <a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i></a>
+                                <p style="color: white;">IS A GREATEST ACHIEVEMENT AND AN ASSET OF HINDU COMMUNITY IN
+                                    THE AREA. YOUR CONTRIBUTION HELPS THE ORGANIZATION TO SERVE OUR COMMUNITY BETTER.
+                                    PLEASE TAKE THE STEP TODAY.</p>
+                                <a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i
+                                        class="pe-7s-info"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-7">
@@ -223,12 +230,15 @@
                                 </div>
                                 <!-- /top-wizard -->
                                 <!-- <form> -->
-                                <form name="razorpay_frm_payment" class="razorpay-frm-payment" id="razorpay-frm-payment" method="post">
+                                <form name="razorpay_frm_payment" class="razorpay-frm-payment" id="razorpay-frm-payment"
+                                    method="post">
                                     <input type="hidden" name="merchant_order_id" id="merchant_order_id" value="12345">
                                     <input type="hidden" name="language" value="EN">
                                     <input type="hidden" name="currency" id="currency" value="INR">
-                                    <input type="hidden" name="surl" id="surl" value="http://localhost/theme/success.php">
-                                    <input type="hidden" name="furl" id="furl" value="http://localhost/theme/failed.php">
+                                    <input type="hidden" name="surl" id="surl"
+                                        value="http://192.168.60.251/amman/success.php">
+                                    <input type="hidden" name="furl" id="furl"
+                                        value="http://192.168.60.251/amman/failed.php">
 
 
                                     <!-- Leave for security protection, read docs for details -->
@@ -238,11 +248,6 @@
                                             <h3 class="main_question"><strong>1/3</strong>I Would Like to Give?</h3>
                                             <div class="row">
                                                 <div class="col-md-12">
-
-
-
-
-
                                                     <!-- partial:index.partial.html -->
                                                     <div class="section over-hide z-bigger">
                                                         <div class="section over-hide z-bigger">
@@ -250,54 +255,64 @@
                                                                 <div class="row justify-content-center pb-5">
                                                                     <div class="" style="text-align: center;">
 
-                                                                        <input type="text" class="form-control" id="amount" name="amount" placeholder="Enter amount" value="">
+                                                                        <input type="text" class="form-control"
+                                                                            id="amount" name="amount"
+                                                                            placeholder="Enter amount" value="">
 
-                                                                        <input class="checkbox-tools required" type="radio" value="10" required="" onclick="show1(this);" name="tools" id="tool-1" checked>
+                                                                        <input class="checkbox-tools required"
+                                                                            type="radio" value="10" required=""
+                                                                            onclick="show1(this);" name="tools"
+                                                                            id="tool-1" checked>
                                                                         <label class="for-checkbox-tools" for="tool-1">
                                                                             <!-- <i class='uil uil-line-alt'></i> -->
                                                                             ₹10
                                                                         </label>
                                                                         <!--
-                        --><input class="checkbox-tools" type="radio" value="50" name="tools" onclick="show1(this);" id="tool-2">
+                        --><input class="checkbox-tools" type="radio" value="50" name="tools" onclick="show1(this);"
+                                                                            id="tool-2">
                                                                         <label class="for-checkbox-tools" for="tool-2">
                                                                             <!-- <i class='uil uil-vector-square'></i> -->
                                                                             ₹50
                                                                         </label>
                                                                         <!--
-                        --><input class="checkbox-tools" type="radio" value="100" name="tools" onclick="show1(this);" id="tool-3">
+                        --><input class="checkbox-tools" type="radio" value="100" name="tools" onclick="show1(this);"
+                                                                            id="tool-3">
                                                                         <label class="for-checkbox-tools" for="tool-3">
                                                                             <!-- <i class='uil uil-ruler'></i> -->
                                                                             ₹100
                                                                         </label>
                                                                         <!--
-                        --><input class="checkbox-tools" type="radio" value="250" name="tools" onclick="show1(this);" id="tool-4">
+                        --><input class="checkbox-tools" type="radio" value="250" name="tools" onclick="show1(this);"
+                                                                            id="tool-4">
                                                                         <label class="for-checkbox-tools" for="tool-4">
                                                                             <!-- <i class='uil uil-crop-alt'></i> -->
                                                                             ₹250
                                                                         </label>
                                                                         <!--
-                        --><input class="checkbox-tools" type="radio" value="500" name="tools" onclick="show1(this);" id="tool-5">
+                        --><input class="checkbox-tools" type="radio" value="500" name="tools" onclick="show1(this);"
+                                                                            id="tool-5">
                                                                         <label class="for-checkbox-tools" for="tool-5">
                                                                             <!-- <i class='uil uil-brush-alt'></i> -->
                                                                             ₹500
                                                                         </label>
                                                                         <!--
                         --><input class="checkbox-tools" type="radio" name="tools" onclick="show2();" id="tool-6">
-                                                                        <label class="for-checkbox-tools" for="tool-6" style="font-size: 12px;
+                                                                        <label class="for-checkbox-tools" for="tool-6"
+                                                                            style="font-size: 12px;
     padding-left: 12px;">
                                                                             <!-- <i class='uil uil-image-resize-landscape'></i> -->
                                                                             Others
                                                                         </label>
 
-
-
-
-
                                                                         <div class="container hide" id="div1">
                                                                             <div class="row">
                                                                                 <div class="col-md-12"><br>
                                                                                     <div class="form-group">
-                                                                                        <input style="background: #fecc1e2e;border: 2px solid #fda30e;" type="text" name="Message" class="form-control" placeholder="Enter Amount">
+                                                                                        <input
+                                                                                            style="background: #fecc1e2e;border: 2px solid #fda30e;"
+                                                                                            type="text" name="Message"
+                                                                                            class="form-control"
+                                                                                            placeholder="Enter Amount">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -309,14 +324,21 @@
                                                                         <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    <input type="text" name="billing_name" class="form-control required" id="billing-name" Placeholder="Name" required>
+                                                                                    <input type="text"
+                                                                                        name="billing_name"
+                                                                                        class="form-control required"
+                                                                                        id="billing-name"
+                                                                                        Placeholder="Name" required>
 
                                                                                     <!-- <input type="text" name="firstname" class="form-control required" placeholder="First name"> -->
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    <input type="text" name="lastname" class="form-control required" placeholder="Last name">
+                                                                                    <input type="text" name="lastname"
+                                                                                        id="lastname"
+                                                                                        class="form-control required"
+                                                                                        placeholder="Last name">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -325,12 +347,17 @@
                                                                         <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    <input type="email" name="email" class="form-control required" placeholder="Your Email">
+                                                                                    <input type="email" name="email"
+                                                                                        class="form-control required"
+                                                                                        placeholder="Your Email">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    <input type="text" name="telephone" class="form-control required" placeholder="Your Phone Number">
+                                                                                    <input type="text"
+                                                                                        name="billing-phone"
+                                                                                        class="form-control required"
+                                                                                        placeholder="Your Phone Number">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -340,23 +367,37 @@
 
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    <select class="form-control required" name="state">
-                                                                                        <option value="" selected="">Select your State</option>
-                                                                                        <option value="Europe">Europe</option>
-                                                                                        <option value="Asia">Asia</option>
-                                                                                        <option value="North America">North America</option>
-                                                                                        <option value="South America">South America</option>
+                                                                                    <select
+                                                                                        class="form-control required"
+                                                                                        name="state" id="state">
+                                                                                        <option value="" selected="">
+                                                                                            Select your State</option>
+                                                                                        <option value="Europe">Europe
+                                                                                        </option>
+                                                                                        <option value="Asia">Asia
+                                                                                        </option>
+                                                                                        <option value="North America">
+                                                                                            North America</option>
+                                                                                        <option value="South America">
+                                                                                            South America</option>
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    <select class="form-control required" name="country">
-                                                                                        <option value="" selected="">Select your City</option>
-                                                                                        <option value="Europe">Europe</option>
-                                                                                        <option value="Asia">Asia</option>
-                                                                                        <option value="North America">North America</option>
-                                                                                        <option value="South America">South America</option>
+                                                                                    <select
+                                                                                        class="form-control required"
+                                                                                        name="city" id="city">
+                                                                                        <option value="" selected="">
+                                                                                            Select your City</option>
+                                                                                        <option value="Europe">Europe
+                                                                                        </option>
+                                                                                        <option value="Asia">Asia
+                                                                                        </option>
+                                                                                        <option value="North America">
+                                                                                            North America</option>
+                                                                                        <option value="South America">
+                                                                                            South America</option>
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
@@ -366,7 +407,10 @@
                                                                         <div class="row">
                                                                             <div class="col-md-12">
                                                                                 <div class="form-group">
-                                                                                    <input type="text" name="Message" class="form-control" placeholder="Your Message">
+                                                                                    <input type="text" name="Message"
+                                                                                        id="message"
+                                                                                        class="form-control"
+                                                                                        placeholder="Your Message">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -375,16 +419,28 @@
                                                                         <div class="row">
                                                                             <div class="col-md-12">
                                                                                 <div class="form-group terms">
-                                                                                    <input name="terms" type="checkbox" class="icheck required" value="yes">
-                                                                                    <label>Please accept <a href="#" data-toggle="modal" data-target="#terms-txt">terms and conditions</a> ?</label>
+                                                                                    <input name="terms" type="checkbox"
+                                                                                        class="icheck required"
+                                                                                        value="yes">
+                                                                                    <label>Please accept <a href="#"
+                                                                                            data-toggle="modal"
+                                                                                            data-target="#terms-txt">terms
+                                                                                            and conditions</a> ?</label>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
 
 
                                                                         <div class="row">
-                                                                            <div class="col" style="text-align: center;">
-                                                                                <button type="button" style="background-color: #3F51B5;" class="btn btn-success mt-4 " id="razor-pay-now"><i class="fa fa-credit-card" aria-hidden="true"></i> Pay</button>
+                                                                            <div class="col"
+                                                                                style="text-align: center;">
+                                                                                <button type="button"
+                                                                                    style="background-color: #3F51B5;"
+                                                                                    class="btn btn-success mt-4 "
+                                                                                    id="razor-pay-now"><i
+                                                                                        class="fa fa-credit-card"
+                                                                                        aria-hidden="true"></i>
+                                                                                    Pay</button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -420,7 +476,8 @@
 
 
         <footer class="site-footer">
-            <div class="site-footer_farm_image"><img src="assets/images/resources/site-footer-farm.png" alt="Farm Image"></div>
+            <div class="site-footer_farm_image"><img src="assets/images/resources/site-footer-farm.png"
+                    alt="Farm Image"></div>
             <div class="container">
                 <div class="row no-gutters" style="margin-left: 6%;margin-right: 6%;text-align: center;">
                     <div class="col-xl-4 col-lg-4 col-md-6">
@@ -452,8 +509,9 @@
                                 <h3 class="red" style="font-size: 22px;">Contact</h3>
                             </div>
                             <div class="footer-widget_contact">
-                                <p>133, Thirumalai Pillai Rd, Parthasarathi Puram, T. Nagar, Chennai, Tamil Nadu 600017</p>
-                                
+                                <p>133, Thirumalai Pillai Rd, Parthasarathi Puram, T. Nagar, Chennai, Tamil Nadu 600017
+                                </p>
+
 
                             </div>
                         </div>
@@ -468,7 +526,7 @@
                 <div class="site-footer_bottom_copyright" style="display: inherit !important;">
                     <p>@ All copyright 2020, <a href="#">Sri Kollapuri Amman Temple</a></p>
                 </div>
-               
+
             </div>
         </div>
 
@@ -486,7 +544,8 @@
         </div><!-- /.side-menu__block-overlay -->
         <div class="side-menu__block-inner ">
             <div class="side-menu__top justify-content-end">
-                <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="assets/images/shapes/close-1-1.png" alt=""></a>
+                <a href="#" class="side-menu__toggler side-menu__close-btn"><img
+                        src="assets/images/shapes/close-1-1.png" alt=""></a>
             </div><!-- /.side-menu__top -->
 
             <nav class="mobile-nav__container">
@@ -540,7 +599,8 @@
         <div class="side-menu__block-inner ">
             <div class="side-menu__top justify-content-end">
 
-                <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="assets/images/shapes/close-1-1.png" alt=""></a>
+                <a href="#" class="side-menu__toggler side-menu__close-btn"><img
+                        src="assets/images/shapes/close-1-1.png" alt=""></a>
             </div><!-- /.side-menu__top -->
 
 
@@ -581,27 +641,27 @@
     <script src="regi/common_scripts.js"></script>
     <!-- Wizard script -->
     <script src="regi/questionare_wizard_func.js"></script>
-    
+
     <script src="regi/functions.js"></script>
 
 
     <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('amount').value = '10';
-        }
-        $(document).ready(function() {
-            document.getElementById('amount').value = '10';
-        });
+    window.onload = function() {
+        document.getElementById('amount').value = '10';
+    }
+    $(document).ready(function() {
+        document.getElementById('amount').value = '10';
+    });
 
-        function show1(selectObject) {
-            var value1 = selectObject.value;
-            document.getElementById('amount').value = value1;
-            document.getElementById('div1').style.display = 'none';
-        }
+    function show1(selectObject) {
+        var value1 = selectObject.value;
+        document.getElementById('amount').value = value1;
+        document.getElementById('div1').style.display = 'none';
+    }
 
-        function show2() {
-            document.getElementById('div1').style.display = 'block';
-        }
+    function show2() {
+        document.getElementById('div1').style.display = 'block';
+    }
     </script>
     <!-- fORM wIZARD -->
     <script src="assets/js/jquery.min.js"></script>
@@ -632,91 +692,111 @@
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> -->
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="assets/js/checkout.js"></script>
 <script type="text/javascript">
-    jQuery(document).on('click', '#razor-pay-now', function(e) {
-        var total = (jQuery('form#razorpay-frm-payment').find('input#amount').val() * 100);
-        var merchant_order_id = jQuery('form#razorpay-frm-payment').find('input#merchant_order_id').val();
-        var merchant_surl_id = jQuery('form#razorpay-frm-payment').find('input#surl').val();
-        var merchant_furl_id = jQuery('form#razorpay-frm-payment').find('input#furl').val();
-        var card_holder_name_id = jQuery('form#razorpay-frm-payment').find('input#billing-name').val();
-        var merchant_total = total;
-        var merchant_amount = jQuery('form#razorpay-frm-payment').find('input#amount').val();
-        var currency_code_id = jQuery('form#razorpay-frm-payment').find('input#currency').val();
-        var key_id = "<?php echo RAZOR_KEY_ID; ?>";
-        var store_name = 'Web Haunt';
-        var store_description = 'Payment';
-        var store_logo = 'https://webhaunt.com/wp-content/uploads/2016/11/webhaunt.png';
-        var email = jQuery('form#razorpay-frm-payment').find('input#billing-email').val();
-        var phone = jQuery('form#razorpay-frm-payment').find('input#billing-phone').val();
+jQuery(document).on('click', '#razor-pay-now', function(e) {
+    var total = (jQuery('form#razorpay-frm-payment').find('input#amount').val() * 100);
+    var merchant_order_id = jQuery('form#razorpay-frm-payment').find('input#merchant_order_id').val();
+    var merchant_surl_id = jQuery('form#razorpay-frm-payment').find('input#surl').val();
+    var merchant_furl_id = jQuery('form#razorpay-frm-payment').find('input#furl').val();
+    var card_holder_name_id = jQuery('form#razorpay-frm-payment').find('input#billing-name').val();
+    var card_holder_lastname = jQuery('form#razorpay-frm-payment').find('input#lastname').val();
+    var card_holder_message = jQuery('form#razorpay-frm-payment').find('input#message').val();
+    // var card_holder_telephone = jQuery('form#razorpay-frm-payment').find('input#telephone').val();
 
-        jQuery('.text-danger').remove();
 
-        if (card_holder_name_id == "") {
-            jQuery('input#billing-name').after('<small class="text-danger">Please enter full mame.</small>');
-            return false;
-        }
-        if (email == "") {
-            jQuery('input#billing-email').after('<small class="text-danger">Please enter valid email.</small>');
-            return false;
-        }
-        if (phone == "") {
-            jQuery('input#billing-phone').after('<small class="text-danger">Please enter valid phone.</small>');
-            return false;
-        }
+    var merchant_total = total;
+    var merchant_amount = jQuery('form#razorpay-frm-payment').find('input#amount').val();
+    var currency_code_id = jQuery('form#razorpay-frm-payment').find('input#currency').val();
+    var key_id = "<?php echo RAZOR_KEY_ID; ?>";
+    var store_name = 'Kolla Puri Amman';
+    var store_description = 'Payment';
+    var store_logo = 'http://localhost/amman/assets/images/amman/logo.png';
+    var email = jQuery('form#razorpay-frm-payment').find('input#billing-email').val();
+    var phone = jQuery('form#razorpay-frm-payment').find('input#billing-phone').val();
+    var e = document.getElementById("state");
+    var e1 = document.getElementById("city");
+    var strUser = e.value;
+    var strcity = e1.value;
 
-        var razorpay_options = {
-            key: key_id,
-            amount: merchant_total,
-            name: store_name,
-            description: store_description,
-            image: store_logo,
-            netbanking: true,
-            currency: currency_code_id,
-            prefill: {
-                name: card_holder_name_id,
-                email: email,
-                contact: phone
-            },
-            notes: {
-                soolegal_order_id: merchant_order_id,
-            },
-            handler: function(transaction) {
-                jQuery.ajax({
-                    url: 'callback.php',
-                    type: 'post',
-                    data: {
-                        razorpay_payment_id: transaction.razorpay_payment_id,
-                        merchant_order_id: merchant_order_id,
-                        merchant_surl_id: merchant_surl_id,
-                        merchant_furl_id: merchant_furl_id,
-                        card_holder_name_id: card_holder_name_id,
-                        merchant_total: merchant_total,
-                        merchant_amount: merchant_amount,
-                        currency_code_id: currency_code_id
-                    },
-                    dataType: 'json',
-                    success: function(res) {
-                        if (res.msg) {
-                            alert(res.msg);
-                            return false;
-                        }
-                        window.location = res.redirectURL;
+    jQuery('.text-danger').remove();
+
+    if (card_holder_name_id == "") {
+        jQuery('input#billing-name').after('<small class="text-danger">Please enter full mame.</small>');
+        return false;
+    }
+    if (card_holder_lastname == "") {
+        jQuery('input#lastname').after('<small class="text-danger">Please enter last mame.</small>');
+        return false;
+    }
+    if (email == "") {
+        jQuery('input#billing-email').after('<small class="text-danger">Please enter valid email.</small>');
+        return false;
+    }
+    if (phone == "") {
+        jQuery('input#billing-phone').after('<small class="text-danger">Please enter valid phone.</small>');
+        return false;
+    }
+
+    var razorpay_options = {
+        key: key_id,
+        amount: merchant_total,
+        name: store_name,
+        description: store_description,
+        image: store_logo,
+        netbanking: true,
+        currency: currency_code_id,
+        prefill: {
+            name: card_holder_name_id,
+            email: email,
+            contact: phone
+        },
+        notes: {
+            soolegal_order_id: merchant_order_id,
+        },
+        handler: function(transaction) {
+            jQuery.ajax({
+                url: 'callback.php',
+                type: 'post',
+                data: {
+                    razorpay_payment_id: transaction.razorpay_payment_id,
+                    merchant_order_id: merchant_order_id,
+                    merchant_surl_id: merchant_surl_id,
+                    merchant_furl_id: merchant_furl_id,
+                    card_holder_name_id: card_holder_name_id,
+                    card_holder_lastname: card_holder_lastname,
+                    card_holder_email: email,
+                    card_holder_phone: phone,
+                    merchant_total: merchant_total,
+                    merchant_amount: merchant_amount,
+                    currency_code_id: currency_code_id,
+                    state: strUser,
+                    city: strcity,
+                    card_holder_message: card_holder_message
+                },
+                dataType: 'json',
+                success: function(res) {
+                    console.log(res);
+                    if (res.msg) {
+                        alert(res.msg);
+                        return false;
                     }
-                });
-            },
-            "modal": {
-                "ondismiss": function() {
-                    // code here
+                    window.location = res.redirectURL;
                 }
-            }
-        };
-        // obj        
-        var objrzpv1 = new Razorpay(razorpay_options);
-        objrzpv1.open();
-        e.preventDefault();
+            });
+        },
+        "modal": {
+            "ondismiss": function() {
 
-    });
+            }
+        }
+    };
+    // obj        
+    var objrzpv1 = new Razorpay(razorpay_options);
+    objrzpv1.open();
+    e.preventDefault();
+
+});
 </script>
 
 </html>

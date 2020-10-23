@@ -1,10 +1,13 @@
 <?php
 require_once "constants.php";
+include("connection.php");
 // initialized cURL Request
 function get_curl_handle($payment_id, $data) {
     $url = 'https://api.razorpay.com/v1/payments/' . $payment_id . '/capture';
-    $key_id = RAZOR_KEY_ID;
-    $key_secret = RAZOR_KEY_SECRET;
+    $key_id = 'rzp_test_oJKBLQ8DAoYqsN';
+    $key_secret = 'NxiFIJFDzWlm4PIIZgQeysEk';
+
+    
     $params = http_build_query($data);
     //cURL Request
     $ch = curl_init();
@@ -26,6 +29,12 @@ $currency_code = $_POST['currency_code_id'];
 // store temprary data
 $dataFlesh = array(
     'card_holder_name' => $_POST['card_holder_name_id'],
+    'card_holder_lastname' => $_POST['card_holder_lastname'],
+    'card_holder_email' => $_POST['card_holder_email'],
+    'card_holder_phone' => $_POST['card_holder_phone'],
+    'card_holder_phone' => $_POST['card_holder_message'],
+    'state' => $_POST['state'],
+    'city' => $_POST['city'],
     'merchant_amount' => $_POST['merchant_amount'],
     'merchant_total' => $_POST['merchant_total'],
     'surl' => $_POST['merchant_surl_id'],
@@ -34,6 +43,10 @@ $dataFlesh = array(
     'order_id' => $_POST['merchant_order_id'],
     'razorpay_payment_id' => $_POST['razorpay_payment_id'],
 );
+
+
+
+
 
 $paymentInfo = $dataFlesh;
 $order_info = array('order_status_id' => $_POST['merchant_order_id']);
@@ -62,6 +75,30 @@ try {
         //Check success response
         if ($http_status === 200 and isset($response_array['error']) === false) {
             $success = true;
+
+            if($success == true){
+                date_default_timezone_set('Asis/Kolkata');
+                $date = date('d-m-Y h:i:s', time());
+                $successmsg = "Success";
+
+            $sql = "INSERT INTO `payment_list` (name, last_name,email,mobile,state,city,message,payment_id,payment_date,status)
+           VALUES ('".$_POST['card_holder_name_id']."', '".$_POST['card_holder_lastname']."'
+           , '".$_POST['card_holder_email']."' , '".$_POST['card_holder_phone']."', '".$_POST['state']."'
+           , '".$_POST['city']."', '".$_POST['card_holder_message']."', '".$_POST['razorpay_payment_id']."' , '".$date."', '".$successmsg."'     )";
+            }else{
+                date_default_timezone_set('Asis/Kolkata');
+                $date = date('d-m-Y h:i:s', time());
+                $failuremsg = "Failure";
+                 $sql = "INSERT INTO `payment_list` (name, last_name,email,mobile,state,city,message,payment_id,payment_date,status)
+           VALUES ('".$_POST['card_holder_name_id']."', '".$_POST['card_holder_lastname']."'
+           , '".$_POST['card_holder_email']."' , '".$_POST['card_holder_phone']."', '".$_POST['state']."'
+           , '".$_POST['city']."', '".$_POST['card_holder_message']."', '".$_POST['razorpay_payment_id']."' , '".$date."', '".$failuremsg."'     )";
+           
+            }
+
+
+
+           
         } else {
             $success = false;
             if (!empty($response_array['error']['code'])) {
