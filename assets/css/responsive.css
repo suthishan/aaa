@@ -195,10 +195,6 @@
 
 /* Tablet Layout: 768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
-
-
-
     .about1_img {
         margin-bottom: 172px;
     }
@@ -1193,14 +1189,14 @@
 
     .main-nav__left {
         margin-right: 0px;
-        padding: 11px 0 11px;
+        padding:15px 0 15px;
     }
 
     .main-nav__right {
     }
     .main-nav__right .icon_cart_box {
         position: relative;
-        top: -3px;
+        top: -2px;
     }
     .main-nav__right .icon_cart_box a span:before {
         position: relative;

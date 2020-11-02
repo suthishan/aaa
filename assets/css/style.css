@@ -1677,7 +1677,8 @@ h6 {
     width: 100%;
     margin-right: auto;
     height: 100vh;
-    background-color: var(--thm-gray);
+    /*background-color: var(--thm-gray);*/
+    background-color: #252525;
     z-index: 999999;
     overflow-y: auto;
     padding: 40px 0;
@@ -1692,19 +1693,22 @@ h6 {
 
 @media (max-width: 575px) {
     .side-menu__block-inner {
-        max-width: 480px;
+        /*max-width: 480px;*/
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     .side-menu__block-inner {
-        max-width: 400px;
+        /*max-width: 400px;*/
+        max-width: 100%;
     }
 }
 
 @media (max-width: 375px) {
     .side-menu__block-inner {
-        max-width: 300px;
+        /*max-width: 300px;*/
+        max-width: 100%;
     }
 }
 
@@ -1726,7 +1730,7 @@ h6 {
 .mobile-nav__container {
     padding-left: 100px;
     padding-right: 100px;
-    padding-top: 50px;
+    padding-top: 35px;
 }
 .mobile-nav__container ul {
     margin: 0;
@@ -1769,7 +1773,7 @@ h6 {
 
 .mobile-nav__container li a {
     text-transform: uppercase;
-    color: #9ca3a9;
+    color: #ffffff;
     font-size: 18px;
     font-weight: 500;
     display: block;
@@ -1780,7 +1784,8 @@ h6 {
 }
 
 .mobile-nav__container li a:hover {
-    color: var(--thm-primary);
+    /*color: var(--thm-primary);*/
+    color:#ff8a26;
 }
 
 .mobile-nav__container li.current-menu-item > a,
@@ -1841,7 +1846,8 @@ h6 {
     margin-top: 30px;
 }
 .side-menu__content p a {
-    color: var(--thm-primary);
+    color: #ff8a26;
+    /*color: var(--thm-primary);*/
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
@@ -3818,7 +3824,8 @@ padding-bottom: 5px;
     margin-bottom: 36px;
 }
 .footer-widget__title h3 {
-    color: #ffffff;
+    /*color: #ffffff;*/
+    color:#6f312d;
     font-size: 30px;
     margin: 0;
     font-weight: 700;
@@ -4060,7 +4067,7 @@ padding-bottom: 5px;
     margin: 0;
 }
 .site-footer_bottom_copyright a {
-    color: #c5c9c4;
+    color: #631f1a;
     font-size: 16px;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;

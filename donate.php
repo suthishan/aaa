@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest">
+    <!-- <link rel="manifest" href="assets/images/favicons/site.webmanifest"> -->
 
     <!-- Fonts-->
     <link
@@ -42,6 +42,9 @@
 
 </head>
 <style type="text/css">
+
+
+
 .owl-nav {
     display: none;
 }
@@ -54,6 +57,7 @@
     .mob_hide {
         display: none !important;
     }
+    .desk_hide{display: block !important;}
 }
 
 /*new*/
@@ -107,87 +111,9 @@ p {
 
     <div class="page-wrapper">
 
-        <div>
-            <img src="assets/img/head.png" style="width: 100%;">
-        </div>
-
-
-        <div class="site-header__header-one-wrap">
-
-            <div class="topbar-one desk_hide">
-                <div class="topbar_bg" style="background-image: url(assets/images/shapes/header-bg.png)"></div>
-                <div class="container mob_hide">
-                    <div class="topbar-one__left">
-                        <a href="mailto:sreekollapuriamman@gmail.com"><span
-                                class="icon-message"></span>sreekollapuriamman@gmail.com</a>
-                        <!-- <a href="tel:666-999-0000"><span class="icon-phone-call"></span>666 888 0000</a> -->
-                    </div>
-                    <div class="topbar-one__middle">
-                        <a href="index.html" class="main-nav__logo">
-                            <img src="assets/images/resources/logo.png" class="main-logo" alt="Awesome Image" />
-                        </a>
-                    </div>
-                    <div class="topbar-one__right">
-                        <div class="topbar-one__social">
-                            <a href="#"><i class="fab fa-facebook-square"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-dribbble"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <header class="main-nav__header-one">
-                <nav class="header-navigation stricky">
-                    <div class="container clearfix">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="main-nav__left">
-                            <!--  <a href="#" class="main-nav__search search-popup__toggler"><i
-                                    class="icon-magnifying-glass"></i></a> -->
-                            <a href="#" class="side-menu__toggler">
-                                <i class="fa fa-bars"></i>
-                            </a>
-                        </div>
-                        <div class="main-nav__main-navigation">
-                            <ul class=" main-nav__navigation-box">
-                                <li class="dropdown">
-                                    <a href="index.html">Home</a>
-
-                                </li>
-                                <li class="dropdown">
-                                    <a href="about.html">About Temple</a>
-
-                                </li>
-                                <li class="dropdown">
-                                    <a href="Events.html">Special Events</a>
-
-                                </li>
-                                <li class="dropdown">
-                                    <a href="gallery.html">Gallery</a>
-
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#">Music</a>
-
-                                </li>
-                                <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
-
-                        <div class="main-nav__right">
-                            <div class="icon_cart_box">
-                                <a href="cart.html">
-                                    <span class="fas fa-donate"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-        </div>
+        <!-- Header Include -->
+        <?php include 'header.php';?>
+        <!-- Header Include -->
 
         <section class="page-header" style="background-image: url(assets/images/main-slider/banner.png);padding: 10%;">
             <div class="container">
@@ -214,8 +140,11 @@ p {
                         <div class="col-lg-5">
                             <div id="left_form">
                                 <!-- <figure><img src="img/registration_bg.svg" alt=""></figure> -->
-                                <h2>Donation</h2>
-                                <p style="color: white;">IS A GREATEST ACHIEVEMENT AND AN ASSET OF HINDU COMMUNITY IN
+                                <h2 class="mob_hide">Donation</h2>
+                                 <h2 class="desk_hide" style="text-align: center;">Donation</h2>
+
+                                <p class="desk_hide" style="text-align: center;"><img src="assets/images/amman/logo.png"></p>
+                                <p  class="mob_hide" style="color: white;">IS A GREATEST ACHIEVEMENT AND AN ASSET OF HINDU COMMUNITY IN
                                     THE AREA. YOUR CONTRIBUTION HELPS THE ORGANIZATION TO SERVE OUR COMMUNITY BETTER.
                                     PLEASE TAKE THE STEP TODAY.</p>
                                 <a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i
@@ -252,7 +181,7 @@ p {
                                                     <div class="section over-hide z-bigger">
                                                         <div class="section over-hide z-bigger">
                                                             <div class="container">
-                                                                <div class="row justify-content-center pb-5">
+                                                                <div class="row justify-content-center pb-0">
                                                                     <div class="" style="text-align: center;">
 
                                                                         <input type="text" class="form-control"
@@ -415,35 +344,39 @@ p {
                                                                             </div>
                                                                         </div>
                                                                         <!-- /row -->
-                                                                        <br>
                                                                         <div class="row">
-                                                                            <div class="col-md-12">
-                                                                                <div class="form-group terms">
+                                                                            <div class="col-md-12" style="text-align: center;">
+                                                                               <!--  <div class="form-group terms">
                                                                                     <input name="terms" type="checkbox"
                                                                                         class="icheck required"
-                                                                                        value="yes">
-                                                                                    <label>Please accept <a href="#"
+                                                                                        value="yes"> -->
+                                                                                    <label><a href="#"
                                                                                             data-toggle="modal"
-                                                                                            data-target="#terms-txt">terms
-                                                                                            and conditions</a> ?</label>
+                                                                                            data-target="#terms-txt"><i class="pe-7s-info"></i> Terms
+                                                                                            and Conditions</a></label>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-
-
-                                                                        <div class="row">
+                                                                        <div class="row" style="padding-top: 12px;padding-bottom: 12px;">
                                                                             <div class="col"
                                                                                 style="text-align: center;">
                                                                                 <button type="button"
-                                                                                    style="background-color: #3F51B5;"
-                                                                                    class="btn btn-success mt-4 "
+                                                                                    style="position: relative;width: 165px;min-height: 49px;font-size: 16px;font-weight: bold;line-height: 20px;float: right;border-radius: 0;text-align: center;color: #fff;background-color: rgb(243,43,86);color: #fff !important;border: none;;"
+                                                                                    class=""
                                                                                     id="razor-pay-now"><i
                                                                                         class="fa fa-credit-card"
                                                                                         aria-hidden="true"></i>
                                                                                     Pay</button>
                                                                             </div>
+
                                                                         </div>
+                                                                         <div class="row" style="text-align: center;">
+                                                                            <div class="col">
+                                                                             <img style="width: 50%;" id="fin-logo" alt="pay-methods" src="https://cdn.razorpay.com/static/assets/pay_methods_branding.png">
+                                                                         </div></div>
                                                                     </div>
+                                                                     <!-- <div style="clear: both;">&nbsp;</div> -->
+                                                                            
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -473,177 +406,69 @@ p {
 
 
 
+        
+       
+        <!-- footer Include -->
+    <?php include 'footer.php';?>
+     <!-- footer Include -->
 
 
-        <footer class="site-footer">
-            <div class="site-footer_farm_image"><img src="assets/images/resources/site-footer-farm.png"
-                    alt="Farm Image"></div>
-            <div class="container">
-                <div class="row no-gutters" style="margin-left: 6%;margin-right: 6%;text-align: center;">
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="footer-widget__column footer-widget__about wow fadeInUp" data-wow-delay="100ms">
-                            <div class="footer-widget__title">
-                                <h3 class="red" style="font-size: 22px;">Temple Hours</h3>
-                            </div>
-                            <div class="footer-widget_about_text">
-                                <p>9 am – 8:30 pm<br>Monday through Sunday</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="footer-widget__column footer-widget__link wow fadeInUp" data-wow-delay="200ms">
-                            <img src="assets/images/amman/logo.png">
-                            <bR><bR>
-                            <div class="site-footer__social" style="padding-left: 18%;">
-                                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-dribbble"></i></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="footer-widget__column footer-widget__contact wow fadeInUp" data-wow-delay="400ms">
-                            <div class="footer-widget__title">
-                                <h3 class="red" style="font-size: 22px;">Contact</h3>
-                            </div>
-                            <div class="footer-widget_contact">
-                                <p>133, Thirumalai Pillai Rd, Parthasarathi Puram, T. Nagar, Chennai, Tamil Nadu 600017
-                                </p>
-
-
-                            </div>
-                        </div>
-                    </div>
-
+<!-- Modal terms -->
+    <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
-            </div>
-        </footer>
-
-        <div class="site-footer_bottom">
-            <div class="container">
-                <div class="site-footer_bottom_copyright" style="display: inherit !important;">
-                    <p>@ All copyright 2020, <a href="#">Sri Kollapuri Amman Temple</a></p>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
                 </div>
-
+               <!--  <div class="modal-footer">
+                    <button type="button" class="btn_1" data-dismiss="modal">Close</button>
+                </div> -->
             </div>
+            <!-- /.modal-content -->
         </div>
-
-
-    </div><!-- /.page-wrapper -->
-
-
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
-
-
-    <div class="side-menu__block">
-        <div class="side-menu__block-overlay custom-cursor__overlay">
-            <div class="cursor"></div>
-            <div class="cursor-follower"></div>
-        </div><!-- /.side-menu__block-overlay -->
-        <div class="side-menu__block-inner ">
-            <div class="side-menu__top justify-content-end">
-                <a href="#" class="side-menu__toggler side-menu__close-btn"><img
-                        src="assets/images/shapes/close-1-1.png" alt=""></a>
-            </div><!-- /.side-menu__top -->
-
-            <nav class="mobile-nav__container">
-                <!-- content is loading via js -->
-            </nav>
-
-            <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
-
-            <div class="side-menu__content">
-                <p><a href="mailto:needhelp@tripo.com">needhelp@agricol.com</a> <br> <a href="tel:888-999-0000">888 999
-                        0000</a></p>
-                <div class="side-menu__social">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                </div>
-            </div>
-        </div>
+        <!-- /.modal-dialog -->
     </div>
+    <!-- /.modal -->
 
-
-    <div class="search-popup">
-        <div class="search-popup__overlay custom-cursor__overlay">
-            <div class="cursor"></div>
-            <div class="cursor-follower"></div>
-        </div><!-- /.search-popup__overlay -->
-        <div class="search-popup__inner">
-            <form action="#" class="search-popup__form">
-                <input type="text" name="search" placeholder="Type here to Search....">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-    </div>
-
-
-
-    </div><!-- /.page-wrapper -->
-
-
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
-
-
-    <div class="side-menu__block">
-
-
-        <div class="side-menu__block-overlay custom-cursor__overlay">
-            <div class="cursor"></div>
-            <div class="cursor-follower"></div>
-        </div><!-- /.side-menu__block-overlay -->
-        <div class="side-menu__block-inner ">
-            <div class="side-menu__top justify-content-end">
-
-                <a href="#" class="side-menu__toggler side-menu__close-btn"><img
-                        src="assets/images/shapes/close-1-1.png" alt=""></a>
-            </div><!-- /.side-menu__top -->
-
-
-            <nav class="mobile-nav__container">
-                <!-- content is loading via js -->
-            </nav>
-            <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
-            <div class="side-menu__content">
-                <p><a href="mailto:needhelp@tripo.com">needhelp@tripo.com</a> <br> <a href="tel:888-999-0000">888 999
-                        0000</a></p>
-                <div class="side-menu__social">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    <!-- Modal info -->
+    <div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="more-infoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="more-infoLabel">Frequently asked questions</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
-            </div><!-- /.side-menu__content -->
-        </div><!-- /.side-menu__block-inner -->
-    </div><!-- /.side-menu__block -->
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+                </div>
+               <!--  <div class="modal-footer">
+                    <button type="button" class="btn_1" data-dismiss="modal">Close</button>
+                </div> -->
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
-
-
-    <div class="search-popup">
-        <div class="search-popup__overlay custom-cursor__overlay">
-            <div class="cursor"></div>
-            <div class="cursor-follower"></div>
-        </div><!-- /.search-popup__overlay -->
-        <div class="search-popup__inner">
-            <form action="#" class="search-popup__form">
-                <input type="text" name="search" placeholder="Type here to Search....">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div><!-- /.search-popup__inner -->
-    </div><!-- /.search-popup -->
-
-    <script src="regi/jquery-3.5.1.min.js"></script>
+<!--  -->
+    <!-- <script src="regi/jquery-3.5.1.min.js"></script> -->
     <!-- Common script -->
     <script src="regi/common_scripts.js"></script>
     <!-- Wizard script -->
-    <script src="regi/questionare_wizard_func.js"></script>
+    <!-- <script src="regi/questionare_wizard_func.js"></script> -->
 
-    <script src="regi/functions.js"></script>
-
+    <!-- <script src="regi/functions.js"></script> -->
+<!--  -->
 
     <script type="text/javascript">
     window.onload = function() {
