@@ -276,14 +276,14 @@ p {
                                                                         <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    <input type="email" name="email"
+                                                                                    <input type="email" name="email" id="billing-email"
                                                                                         class="form-control required"
                                                                                         placeholder="Your Email">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    <input type="text"
+                                                                                    <input type="text" id="billing-phone"
                                                                                         name="billing-phone"
                                                                                         class="form-control required"
                                                                                         placeholder="Your Phone Number">
@@ -517,8 +517,145 @@ p {
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> -->
-<script src="assets/js/checkout.js"></script>
+<!-- <script src="assets/js/checkout.js"></script> -->
+<!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
+<!-- <script>
+
+
+
+
+
+$('body').on('click', 'razor-pay-now', function(e){
+
+
+
+var totalAmount = $(this).attr("data-amount");
+var product_id =  $(this).attr("data-id");
+var options = {
+"key": "rzp_live_ILgsfZCZoFIKMb", // secret key id
+"amount": (1*100), // 2000 paise = INR 20
+"name": "Tutsmake",
+"description": "Payment",
+"image": "//www.tutsmake.com/wp-content/uploads/2018/12/cropped-favicon-1024-1-180x180.png",
+"handler": function (response){
+$.ajax({
+url: 'https://www.tutsmake.com/Demos/php/razorpay/payment-proccess.php',
+type: 'post',
+dataType: 'json',
+data: {
+razorpay_payment_id: response.razorpay_payment_id , totalAmount : totalAmount ,product_id : product_id,
+}, 
+success: function (msg) {
+window.location.href = 'https://www.tutsmake.com/Demos/php/razorpay/success.php';
+}
+});
+},
+"theme": {
+"color": "#528FF0"
+}
+};
+var rzp1 = new Razorpay(options);
+rzp1.open();
+e.preventDefault();
+
+
+
+
+
+
+
+});
+</script> -->
+
+
+
 <script type="text/javascript">
+
+$("button").click(function(e) {
+    e.preventDefault();
+
+    var total = (jQuery('form#razorpay-frm-payment').find('input#amount').val() * 100);
+    var merchant_order_id = jQuery('form#razorpay-frm-payment').find('input#merchant_order_id').val();
+    var merchant_surl_id = jQuery('form#razorpay-frm-payment').find('input#surl').val();
+    var merchant_furl_id = jQuery('form#razorpay-frm-payment').find('input#furl').val();
+    var card_holder_name_id = jQuery('form#razorpay-frm-payment').find('input#billing-name').val();
+    var card_holder_lastname = jQuery('form#razorpay-frm-payment').find('input#lastname').val();
+    var card_holder_message = jQuery('form#razorpay-frm-payment').find('input#message').val();
+    // var card_holder_telephone = jQuery('form#razorpay-frm-payment').find('input#telephone').val();
+
+
+    var merchant_total = total;
+    var merchant_amount = jQuery('form#razorpay-frm-payment').find('input#amount').val();
+    var currency_code_id = jQuery('form#razorpay-frm-payment').find('input#currency').val();
+    var key_id = "<?php echo RAZOR_KEY_ID; ?>";
+    var store_name = 'Kolla Puri Amman';
+    var store_description = 'Payment';
+    var store_logo = 'assets/images/amman/logo.png';
+    var email = jQuery('form#razorpay-frm-payment').find('input#billing-email').val();
+    var phone = jQuery('form#razorpay-frm-payment').find('input#billing-phone').val();
+    var e = document.getElementById("state");
+    var e1 = document.getElementById("city");
+    var strUser = e.value;
+    var strcity = e1.value;
+
+    if (card_holder_name_id == "") {
+        jQuery('input#billing-name').after('<small class="text-danger">Please enter full mame.</small>');
+        return false;
+    }
+    if (card_holder_lastname == "") {
+        jQuery('input#lastname').after('<small class="text-danger">Please enter last mame.</small>');
+        return false;
+    }
+    if (email == "") {
+        jQuery('input#billing-email').after('<small class="text-danger">Please enter valid email.</small>');
+        return false;
+    }
+    if (phone == "") {
+        jQuery('input#billing-phone').after('<small class="text-danger">Please enter valid phone.</small>');
+        return false;
+    }
+
+
+    $.ajax({
+        type: "POST",
+        url: "send_payment.php",
+        data: { 
+            razorpay_payment_id: "1",
+            merchant_order_id: merchant_order_id,
+            merchant_surl_id: merchant_surl_id,
+            merchant_furl_id: merchant_furl_id,
+            card_holder_name_id: card_holder_name_id,
+            card_holder_lastname: card_holder_lastname,
+            card_holder_email: email,
+            card_holder_phone: phone,
+            merchant_total: merchant_total,
+            merchant_amount: merchant_amount,
+            currency_code_id: currency_code_id,
+            state: strUser,
+            city: strcity,
+            card_holder_message: card_holder_message
+        },
+        
+        success: function(result) {
+            alert(result);
+
+            if(result == "Success"){
+                console.log(result);
+                window.location = "pay.php";
+            }else{
+                console.log(result);
+            }
+        },
+        error: function(result) {
+            alert('error');
+        }
+    });
+});
+
+</script>
+
+
+<!-- <script type="text/javascript">
 jQuery(document).on('click', '#razor-pay-now', function(e) {
     var total = (jQuery('form#razorpay-frm-payment').find('input#amount').val() * 100);
     var merchant_order_id = jQuery('form#razorpay-frm-payment').find('input#merchant_order_id').val();
@@ -536,13 +673,15 @@ jQuery(document).on('click', '#razor-pay-now', function(e) {
     var key_id = "<?php echo RAZOR_KEY_ID; ?>";
     var store_name = 'Kolla Puri Amman';
     var store_description = 'Payment';
-    var store_logo = 'http://localhost/amman/assets/images/amman/logo.png';
+    var store_logo = 'assets/images/amman/logo.png';
     var email = jQuery('form#razorpay-frm-payment').find('input#billing-email').val();
     var phone = jQuery('form#razorpay-frm-payment').find('input#billing-phone').val();
     var e = document.getElementById("state");
     var e1 = document.getElementById("city");
     var strUser = e.value;
     var strcity = e1.value;
+   
+    
 
     jQuery('.text-danger').remove();
 
@@ -565,7 +704,7 @@ jQuery(document).on('click', '#razor-pay-now', function(e) {
 
     var razorpay_options = {
         key: key_id,
-        amount: merchant_total,
+        amount: '100',
         name: store_name,
         description: store_description,
         image: store_logo,
@@ -576,12 +715,13 @@ jQuery(document).on('click', '#razor-pay-now', function(e) {
             email: email,
             contact: phone
         },
+        
         notes: {
             soolegal_order_id: merchant_order_id,
         },
         handler: function(transaction) {
             jQuery.ajax({
-                url: 'callback.php',
+                url: 'pay.php',
                 type: 'post',
                 data: {
                     razorpay_payment_id: transaction.razorpay_payment_id,
@@ -601,6 +741,8 @@ jQuery(document).on('click', '#razor-pay-now', function(e) {
                 },
                 dataType: 'json',
                 success: function(res) {
+                    alert(res);
+                    console.log("test");
                     console.log(res);
                     if (res.msg) {
                         alert(res.msg);
@@ -622,6 +764,6 @@ jQuery(document).on('click', '#razor-pay-now', function(e) {
     e.preventDefault();
 
 });
-</script>
+</script>  -->
 
 </html>
