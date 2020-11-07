@@ -39,6 +39,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
+     <!-- State City script -->
+     <script src="assets/js/cities.js"></script>
+      <!-- State City script -->
+
+     
+   
 
 </head>
 <style type="text/css">
@@ -76,6 +82,34 @@ p {
 .white {
     color: white !important;
 }
+
+
+/*table*/
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+      box-shadow: inset 0px 16px 0px 0px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(0deg, #fd9e10 0%, #dab90e 100%);
+}
+/*table*/
 </style>
 
 
@@ -278,7 +312,7 @@ p {
                                                                                 <div class="form-group">
                                                                                     <input type="email" name="email" id="billing-email"
                                                                                         class="form-control required"
-                                                                                        placeholder="Your Email">
+                                                                                        placeholder="Your Email" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
@@ -286,51 +320,30 @@ p {
                                                                                     <input type="text" id="billing-phone"
                                                                                         name="billing-phone"
                                                                                         class="form-control required"
-                                                                                        placeholder="Your Phone Number">
+                                                                                        placeholder="Your Phone Number" required>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <!-- /row -->
 
-                                                                        <div class="row">
+                                                                            <div class="row">
 
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    <select
+                                                                                    <select onchange="print_city('city', this.selectedIndex);"
                                                                                         class="form-control required"
-                                                                                        name="state" id="state">
-                                                                                        <option value="" selected="">
-                                                                                            Select your State</option>
-                                                                                        <option value="Europe">Europe
-                                                                                        </option>
-                                                                                        <option value="Asia">Asia
-                                                                                        </option>
-                                                                                        <option value="North America">
-                                                                                            North America</option>
-                                                                                        <option value="South America">
-                                                                                            South America</option>
+                                                                                        name="state" id="state" required>
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    <select
-                                                                                        class="form-control required"
-                                                                                        name="city" id="city">
-                                                                                        <option value="" selected="">
-                                                                                            Select your City</option>
-                                                                                        <option value="Europe">Europe
-                                                                                        </option>
-                                                                                        <option value="Asia">Asia
-                                                                                        </option>
-                                                                                        <option value="North America">
-                                                                                            North America</option>
-                                                                                        <option value="South America">
-                                                                                            South America</option>
-                                                                                    </select>
+                                                                                    <select  name="city" id="city" class="form-control required" required></select>
+                                                                                 
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+
                                                                         <!-- /row -->
 
                                                                         <div class="row">
@@ -339,7 +352,7 @@ p {
                                                                                     <input type="text" name="Message"
                                                                                         id="message"
                                                                                         class="form-control"
-                                                                                        placeholder="Your Message">
+                                                                                        placeholder="Your Message" required="">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -360,7 +373,15 @@ p {
                                                                         <div class="row" style="padding-top: 12px;padding-bottom: 12px;">
                                                                             <div class="col"
                                                                                 style="text-align: center;">
-                                                                                <button type="button"
+                                                                            <!--     <button type="button"
+                                                                                    style="position: relative;width: 165px;min-height: 49px;font-size: 16px;font-weight: bold;line-height: 20px;float: right;border-radius: 0;text-align: center;color: #fff;background-color: rgb(243,43,86);color: #fff !important;border: none;;"
+                                                                                    class=""
+                                                                                    id="razor-pay-now"><i
+                                                                                        class="fa fa-credit-card"
+                                                                                        aria-hidden="true"></i>
+                                                                                    Pay</button> -->
+
+                                                                                        <button type="submit"
                                                                                     style="position: relative;width: 165px;min-height: 49px;font-size: 16px;font-weight: bold;line-height: 20px;float: right;border-radius: 0;text-align: center;color: #fff;background-color: rgb(243,43,86);color: #fff !important;border: none;;"
                                                                                     class=""
                                                                                     id="razor-pay-now"><i
@@ -442,13 +463,24 @@ p {
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="more-infoLabel">Frequently asked questions</h4>
+                    <h4 class="modal-title" id="more-infoLabel">Donation List</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-                    <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+                   <table id="customers">
+                    <tr>
+                     <th>S.No</th>
+                     <th>Name</th>
+                     <th>Address</th>
+                      <th>Amount</th>
+                 </tr>
+                   <tr>
+                     <td>1</td>
+                     <td>Maria Anders</td>
+                     <td>Germany</td>
+                      <td>Rs: 250</td>
+                 </tr>
+                </table>
                 </div>
                <!--  <div class="modal-footer">
                     <button type="button" class="btn_1" data-dismiss="modal">Close</button>
@@ -459,6 +491,20 @@ p {
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
+
+
+
+
+
+
+
+
+
+
+
+ <!-- State City script -->
+ <script language="javascript">print_state("state");</script>
+ <!-- State City script -->
 
 <!--  -->
     <!-- <script src="regi/jquery-3.5.1.min.js"></script> -->
@@ -474,9 +520,10 @@ p {
     window.onload = function() {
         document.getElementById('amount').value = '10';
     }
-    $(document).ready(function() {
-        document.getElementById('amount').value = '10';
-    });
+    // $(document).ready(function() {
+    //     document.getElementById('amount').value = '10';
+    // }
+    // );
 
     function show1(selectObject) {
         var value1 = selectObject.value;
@@ -514,6 +561,21 @@ p {
     <!-- template scripts -->
     <script src="assets/js/theme.js"></script>
 </body>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> -->
@@ -765,5 +827,146 @@ jQuery(document).on('click', '#razor-pay-now', function(e) {
 
 });
 </script>  -->
+
+
+
+
+<!-- Validate js -->
+
+<!-- <script type="text/javascript">
+$(document).ready(function() {
+    $('#razorpay-frm-payment').bootstrapValidator({
+        message: 'This value is not valid',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            username: {
+                message: 'The username is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The username is required and can\'t be empty'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 30,
+                        message: 'The username must be more than 6 and less than 30 characters long'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9_\.]+$/,
+                        message: 'The username can only consist of alphabetical, number, dot and underscore'
+                    }
+                }
+            },
+            country: {
+                validators: {
+                    notEmpty: {
+                        message: 'The country is required and can\'t be empty'
+                    }
+                }
+            },
+            acceptTerms: {
+                validators: {
+                    notEmpty: {
+                        message: 'You have to accept the terms and policies'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email address is required and can\'t be empty'
+                    },
+                    emailAddress: {
+                        message: 'The input is not a valid email address'
+                    }
+                }
+            },
+            website: {
+                validators: {
+                    uri: {
+                        allowLocal: true,
+                        message: 'The input is not a valid URL'
+                    }
+                }
+            },
+            phoneNumberUS: {
+                validators: {
+                    phone: {
+                        message: 'The input is not a valid US phone number'
+                    }
+                }
+            },
+            phoneNumberUK: {
+                validators: {
+                    phone: {
+                        message: 'The input is not a valid UK phone number',
+                        country: 'GB'
+                    }
+                }
+            },
+            color: {
+                validators: {
+                    hexColor: {
+                        message: 'The input is not a valid hex color'
+                    }
+                }
+            },
+            zipCode: {
+                validators: {
+                    zipCode: {
+                        country: 'US',
+                        message: 'The input is not a valid US zip code'
+                    }
+                }
+            },
+            password: {
+                validators: {
+                    notEmpty: {
+                        message: 'The password is required and can\'t be empty'
+                    },
+                    identical: {
+                        field: 'confirmPassword',
+                        message: 'The password and its confirm are not the same'
+                    }
+                }
+            },
+            confirmPassword: {
+                validators: {
+                    notEmpty: {
+                        message: 'The confirm password is required and can\'t be empty'
+                    },
+                    identical: {
+                        field: 'password',
+                        message: 'The password and its confirm are not the same'
+                    }
+                }
+            },
+            ages: {
+                validators: {
+                    lessThan: {
+                        value: 100,
+                        inclusive: true,
+                        message: 'The ages has to be less than 100'
+                    },
+                    greaterThan: {
+                        value: 10,
+                        inclusive: false,
+                        message: 'The ages has to be greater than or equals to 10'
+                    }
+                }
+            }
+        }
+    });
+});
+</script> -->
+<!-- validate js end -->
+
+
+
+
+
 
 </html>

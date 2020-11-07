@@ -105,14 +105,12 @@ margin-bottom: 4px !important;
 
         <section class="about_two">
             <div class="container">
-
-                <div class="block-title text-center title-boxs">
-                    
+              <div class="block-title text-center title-boxs">
                     <h3 class="red" style="padding-bottom: 10px;">Contact Us</h3>
                     <div class="leaf">
                         <img src="assets/images/resources/leaf.png" alt="">
                     </div>
-                </div>
+              </div>
 
 
             <!-- TEXT    -->

@@ -110,8 +110,8 @@ $json = json_encode($data);
 
 ?>
 
-
-<form action="verify.php" method="POST">
+<body >
+<form action="verify.php" method="POST" >
   <script
     src="https://checkout.razorpay.com/v1/checkout.js"
     data-key="<?php echo $data['key']?>"
@@ -131,4 +131,21 @@ $json = json_encode($data);
   </script>
   <!-- Any extra fields to be submitted with the form but not sent to Razorpay -->
   <input type="hidden" name="shopping_order_id" value="3456">
+
+  <input type="submit" hidden  onclick="test()" id="btn" value="Pay Now" class="razorpay-payment-button">
 </form>
+
+
+
+
+
+<style type="text/css">
+    .razorpay-payment-button{display: none;}
+</style>
+<Script>
+window.onload = function(){
+  document.getElementById('btn').click();
+}
+    </Script>
+
+    </body>
