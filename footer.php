@@ -1,6 +1,7 @@
            <footer class="site-footer">
-            <div class="site-footer_farm_image"><img src="assets/images/resources/site-footer-farm.png"
-                    alt="Farm Image"></div>
+          <!--   <div class="site-footer_farm_image">
+                <img src="assets/images/resources/site-footer-farm.png"
+                    alt="Farm Image"></div> -->
             <div class="container">
                 <div class="row no-gutters" style="margin-left: 6%;margin-right: 6%;text-align: center;">
                     <div class="col-xl-4 col-lg-4 col-md-6">

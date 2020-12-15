@@ -33,8 +33,8 @@
                     <div class="container clearfix">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="main-nav__left">
-                            <a href="#" class="main-nav__search search-popup__toggler"><i
-                                    class="icon-magnifying-glass"></i></a>
+                        <!--     <a href="#" class="main-nav__search search-popup__toggler"><i
+                                    class="icon-magnifying-glass"></i></a> -->
                             <a href="#" class="side-menu__toggler">
                                 <i class="fa fa-bars"></i>
                             </a>
@@ -58,7 +58,7 @@
                                     
                                 </li>
                                 <li class="dropdown">
-                                    <a href="musics.php">Music</a>
+                                    <a href="#">Music</a>
                                     
                                 </li>
                                 <li>
@@ -70,7 +70,8 @@
                         <div class="main-nav__right">
                             <div class="icon_cart_box">
                                 <a href="donate.php">
-                                    <span class="fas fa-donate"></span>
+                                    <!-- <span class="fas fa-donate"></span> -->
+                                    <div id="div1" class="fa"></div>
                                 </a>
                             </div>
                         </div>
@@ -78,3 +79,24 @@
                 </nav>
             </header>
         </div>
+
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <script>
+function smile() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf4b9;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf664;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf4b9;";
+    }, 2000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf4c0;";
+    }, 3000);
+}
+smile();
+setInterval(smile, 4000);
+</script>

@@ -40,9 +40,8 @@
 
  <link rel="stylesheet" href="regi/style.css">
 
-      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
 
 </head>
 <style type="text/css">
@@ -93,25 +92,25 @@ margin-bottom: 4px !important;
 
          <!-- Header Include -->
         <?php
-         include 'header.php'
+         // include 'header.php'
          ;?>
         <!-- Header Include -->
 
-        <section class="page-header" style="background-image: url(assets/images/main-slider/banner.png);padding: 10%;">
+     <!--    <section class="page-header" style="background-image: url(assets/images/main-slider/banner.png);padding: 10%;">
             <div class="container">
                 
             </div>
         </section>
-
+ -->
         <section class="about_two">
             <div class="container">
-              <div class="block-title text-center title-boxs">
+           <!--    <div class="block-title text-center title-boxs">
                     <h3 class="red" style="padding-bottom: 10px;">Contact Us</h3>
                     <div class="leaf">
                         <img src="assets/images/resources/leaf.png" alt="">
                     </div>
               </div>
-
+ -->
 
             <!-- TEXT    -->
 
@@ -149,7 +148,7 @@ margin-bottom: 4px !important;
                       <div class="row">
                         <div class="col" style="text-align: center;">
                             <div class="form-group">
-                            <input type="button" value="Submit" name="submit" onclick="getcontact()"> 
+                            <!-- <input type="button" value="Submit" name="submit" onclick="getcontact()">  -->
                             <button type="submit" class="submits" name="submit" id="submit">Submit</button>
                             <span style="color:red;" id="msg"></span>
                          
@@ -168,7 +167,7 @@ margin-bottom: 4px !important;
             </div>
         </section>
 
-        <script type="text/javascript">
+       <!--  <script type="text/javascript">
 
 function getcontact()
   {
@@ -182,7 +181,7 @@ function getcontact()
     console.log(message);
     $.ajax({
     type: 'GET',
-    url: 'submit.php',
+    url: 'p.php',
     data: {for:name, for1:email, for2:mobile, for3:message},
     success: function(data)
     {
@@ -200,8 +199,8 @@ function getcontact()
   }
 
 </script>
+ -->
 
-<!-- 
 
        <script>
       jQuery('#frmContactus').on('submit',function(e){
@@ -222,7 +221,7 @@ function getcontact()
         });
         e.preventDefault();
       });
-      </script> -->
+      </script>
     
 
 

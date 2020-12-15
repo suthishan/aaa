@@ -181,8 +181,12 @@ p {
                                 <p  class="mob_hide" style="color: white;">IS A GREATEST ACHIEVEMENT AND AN ASSET OF HINDU COMMUNITY IN
                                     THE AREA. YOUR CONTRIBUTION HELPS THE ORGANIZATION TO SERVE OUR COMMUNITY BETTER.
                                     PLEASE TAKE THE STEP TODAY.</p>
-                                <a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i
-                                        class="pe-7s-info"></i></a>
+
+<!-- 
+                                <a href="#0" id="" data-toggle="modal" data-target="#more-info"><i
+                                        class="pe-7s-info"></i></a> -->
+
+                                        <!-- <label><a href="#0"  id="" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i> Donor List</a></label> -->
                             </div>
                         </div>
                         <div class="col-lg-7">
@@ -459,14 +463,15 @@ p {
     <!-- /.modal -->
 
     <!-- Modal info -->
-    <div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="more-infoLabel" aria-hidden="true">
+    <div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="more-infoLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="more-infoLabel">Donation List</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" >
+                    <div style="overflow-x:auto;">
                    <table id="customers">
                     <tr>
                      <th>S.No</th>
@@ -481,6 +486,7 @@ p {
                       <td>Rs: 250</td>
                  </tr>
                 </table>
+            </div>
                 </div>
                <!--  <div class="modal-footer">
                     <button type="button" class="btn_1" data-dismiss="modal">Close</button>
