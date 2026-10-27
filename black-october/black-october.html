@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Black October 2026 — Suthishan</title>
+<style>
+  :root {
+    --orange: #F26722;      /* JAPFA brand orange (Brandfetch: "Flamingo") */
+    --orange-dark: #C9501A;
+    --orange-tint: #FEF1EA;
+    --ink: #1E1E1E;
+    --muted: #5B5B5B;
+    --rule: #E6E2DF;
+  }
+  @page { size: A4; margin: 16mm 16mm 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Inter", sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.55; background: #fff; }
+  .mono { font-family: "JetBrains Mono", monospace; letter-spacing: .12em; text-transform: uppercase; font-size: 7.5pt; }
+  h1, h2, h3 { font-family: "Bitstream Charter", "Caladea", serif; font-weight: 700; margin: 0; line-height: 1.1; }
+  h1 { font-size: 36pt; }
+  h2 { font-size: 22pt; margin-top: 4px; }
+  h3 { font-size: 15pt; margin: 4px 0 6px; }
+  em.accent { color: var(--orange); font-style: italic; }
+
+  /* Cover */
+  .cover { border-top: 10px solid var(--orange); padding-top: 22px; margin-bottom: 26px; }
+  .brand { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+  .brand .name { font-family: "Inter Display", "Inter", sans-serif; font-weight: 800; font-size: 20pt; color: var(--orange); letter-spacing: -.01em; }
+  .brand .tag { color: var(--muted); }
+  .kicker { color: var(--orange); margin-bottom: 12px; }
+  .lede { color: var(--muted); font-size: 12pt; max-width: 150mm; margin-top: 14px; }
+  .source-box { margin-top: 18px; padding: 10px 14px; background: var(--orange-tint); border-left: 4px solid var(--orange); font-size: 9pt; }
+
+  section { margin-top: 26px; }
+  .sec-label { color: var(--orange); margin-bottom: 4px; }
+  .card { border: 1px solid var(--rule); border-radius: 10px; padding: 14px 18px; margin-top: 12px; break-inside: avoid; }
+  .card h3 { font-size: 13pt; color: var(--orange-dark); }
+  ul { margin: 6px 0 0; padding-left: 18px; }
+  li { margin: 3px 0; }
+  li::marker { color: var(--orange); }
+
+  .incident { border-top: 1px solid var(--rule); padding-top: 14px; margin-top: 14px; break-inside: avoid; }
+  .meta { display: flex; gap: 12px; align-items: center; }
+  .date { color: var(--orange); font-weight: 700; }
+  .badge { background: var(--ink); color: #fff; padding: 2px 7px; border-radius: 4px; font-size: 6.8pt; }
+  .why { margin-top: 6px; }
+  .why b { color: var(--orange-dark); }
+  .todo-label { color: var(--muted); margin-top: 8px; }
+  .refs { margin-top: 6px; color: var(--muted); font-size: 7pt; }
+
+  blockquote { margin: 12px 0; padding: 10px 16px; border-left: 4px solid var(--orange); background: #FAFAFA; break-inside: avoid; }
+  blockquote .who { font-weight: 700; font-size: 9pt; }
+  blockquote .when { color: var(--muted); font-size: 8pt; margin-top: 4px; }
+
+  .stats { display: flex; gap: 12px; margin: 12px 0; }
+  .stat { flex: 1; background: var(--orange-tint); border-radius: 8px; padding: 10px 12px; }
+  .stat .n { font-family: "Bitstream Charter", serif; font-size: 20pt; font-weight: 700; color: var(--orange-dark); }
+
+  pre { font-family: "JetBrains Mono", monospace; font-size: 8pt; background: var(--ink); color: #F5F5F5; padding: 12px 14px; border-radius: 8px; white-space: pre-wrap; break-inside: avoid; }
+
+  .footer { margin-top: 34px; border-top: 3px solid var(--orange); padding-top: 14px; text-align: center; }
+  .footer .name { font-weight: 800; font-size: 16pt; color: var(--orange); }
+  .footer .credit { color: var(--muted); font-size: 8.5pt; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="brand">
+    <div class="name">Suthishan</div>
+    <div class="mono tag">Personal reference copy</div>
+  </div>
+  <div class="mono kicker">Security briefing · Updated Oct 27, 2026</div>
+  <h1>Black October,<br><em class="accent">what broke &amp; why.</em></h1>
+  <p class="lede">In just over two weeks, software millions of people trust broke one after another. For each incident: what happened, why it happened, and exactly what to do.</p>
+  <div class="source-box"><b>Curated by Suthishan.</b> Original guide by <b>Vignesh (@vignxs)</b>, Tamil AI Updates (Instagram @tamil_ai_updates) — vignxsai.vercel.app/guides/black-october</div>
+</div>
+
+<section>
+  <div class="mono sec-label">01 · Do this first</div>
+  <h2>Protect yourself <em class="accent">today.</em></h2>
+  <div class="card">
+    <h3>Everyone</h3>
+    <ul>
+      <li>Update your phone, laptop and browser today. Then check again in a week.</li>
+      <li>Update your apps too: Signal, WhatsApp, Slack, Discord.</li>
+      <li>Turn on two-factor authentication everywhere, preferably with an authenticator app, not SMS.</li>
+      <li>Don't click links in unexpected emails or messages, especially ones about 'certificate fixes' or 'security updates'.</li>
+      <li>Avoid public Wi-Fi until your devices are updated.</li>
+      <li>Keep an offline backup of important files, so ransomware can't hold them hostage.</li>
+      <li>Never share an OTP. Banks never ask for it. In India, report fraud at 1930.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Developers</h3>
+    <ul>
+      <li>Rotate API keys (OpenAI, Anthropic, Google, Stripe, cloud) and set spending limits.</li>
+      <li>Pin dependency versions and use lockfiles. Don't auto-install 'latest' this month.</li>
+      <li>Update package managers and runtimes: uv, npm, bun, cargo, Go, Node.js, PHP.</li>
+      <li>Patch self-hosted tools: GitLab, WordPress plugins, anything internet-facing.</li>
+      <li>Remove secrets from old or unused systems. They're the easiest way in.</li>
+      <li>Ask your coding agent to audit your repos for these exact issues (see below).</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="mono sec-label">02 · The timeline</div>
+  <h2>Sixteen days, <em class="accent">thirteen incidents.</em></h2>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 12</span><span class="mono badge">CVSS 10.0</span></div>
+    <h3>GitLab</h3>
+    <p>A perfect-10 flaw in self-managed GitLab let an attacker run code on the server without logging in.</p>
+    <p class="why"><b>Why it happened.</b> An integer overflow in the CI/CD regular-expression compiler. A crafted regex in a CI config file could overflow memory and execute commands as the GitLab user.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul>
+      <li>Self-managed GitLab: upgrade to the patched release (19.4.2 / 19.3.5 / 19.2.8 or newer). Internet-facing servers first.</li>
+      <li>GitLab.com and GitLab Dedicated are already patched.</li>
+      <li>A second critical fix shipped on Oct 21, so update again even if you patched on Oct 12.</li>
+    </ul>
+    <div class="mono refs">Sources: CSA Singapore Advisory · eSecurity Planet</div>
+  </div>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 15–19</span><span class="mono badge">Poisoned updates</span></div>
+    <h3>WordPress: Rank Math PRO &amp; UpdraftPlus</h3>
+    <p>Rank Math PRO 3.0.123 shipped with malicious code. Days later, attackers broke into TeamUpdraft (UpdraftPlus) and stole customer connection keys, then used them to install backdoor plugins on connected sites.</p>
+    <p class="why"><b>Why it happened.</b> Supply-chain attack: instead of hacking thousands of websites, hack the one vendor they all trust. The official update becomes the weapon.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul>
+      <li>Rank Math PRO: update to 3.0.124.</li>
+      <li>UpdraftPlus: update to the Oct 19 release that revokes UpdraftCentral keys.</li>
+      <li>Revoking keys is not enough: check for unknown plugins and admin accounts, and end active sessions.</li>
+      <li>Don't 'repair' a suspicious plugin. Delete it.</li>
+    </ul>
+    <div class="mono refs">Sources: BleepingComputer · Patchstack</div>
+  </div>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 17–20</span><span class="mono badge">8 CA keys exposed</span></div>
+    <h3>eMudhra (Bengaluru)</h3>
+    <p>eMudhra is a Certificate Authority: it vouches that a website is real, which is what the padlock in your browser means. The private keys of 8 of its intermediate certificates were weak and could be recovered in under a second.</p>
+    <p class="why"><b>Why it happened.</b> A real key is a random number about 115 digits long. These eight were all below 256, and one was literally the number 4, so anyone could find them in at most 256 guesses. The cause: a flawed key-ceremony script that created a second, weak key pair during a test, plus human error at several steps. With such a key, someone could issue a 'valid' certificate for a fake site. eMudhra says there's no evidence the keys were exploited and no data was breached.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul>
+      <li>Chrome, Firefox, Apple and Microsoft have already blocked the certificates. Update your browser and OS.</li>
+      <li>Developers: update Go, Node.js and uv (0.13.4+). Tools that do their own certificate checks need patches too.</li>
+      <li>Ignore emails offering a 'certificate fix'. That's the phishing that follows incidents like this.</li>
+    </ul>
+    <div class="mono refs">Sources: The Hacker News · Help Net Security</div>
+  </div>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 18</span><span class="mono badge">API keys stolen</span></div>
+    <h3>OpenCode</h3>
+    <p>Attackers got into an old OpenCode system and took OpenAI, Anthropic and Google API keys stored by 1.4% of Console users. Some developers saw charges of over $1,700 they never made.</p>
+    <p class="why"><b>Why it happened.</b> An outdated system that was being decommissioned still held live third-party keys. Old systems with real secrets are a favourite way in.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul>
+      <li>Revoke and replace any key you linked to OpenCode, from the provider's own dashboard.</li>
+      <li>Set a monthly spending limit on every AI provider account.</li>
+      <li>Check recent usage for anything you didn't run.</li>
+    </ul>
+    <div class="mono refs">Sources: TechCrunch · Infosecurity Magazine</div>
+  </div>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 19</span><span class="mono badge">100+ companies</span></div>
+    <h3>One hacker + an AI agent army</h3>
+    <p>Reuters reported that a single hacker pointed AI agents at more than 1,200 websites and broke into over 100 organisations, including John Deere and SharkNinja, for roughly $5,000 in AI costs.</p>
+    <p class="why"><b>Why it happened.</b> The agents ran most of each intrusion on their own: recon, finding weaknesses, breaking in. The companies say damage was limited, but the cost of attacking has collapsed.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul>
+      <li>Treat every public website, including small vendor and support sites, as a target.</li>
+      <li>Patch fast. AI agents find old bugs in hours, not weeks.</li>
+    </ul>
+    <div class="mono refs">Sources: Quartz (on Reuters)</div>
+  </div>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 21</span><span class="mono badge">Credential stealer</span></div>
+    <h3>LiteLLM 1.107.0</h3>
+    <p>The popular AI gateway library shipped a poisoned release on PyPI and Docker Hub with a password stealer and a remote code loader.</p>
+    <p class="why"><b>Why it happened.</b> The attacker had GitHub credentials for three LiteLLM developers, bypassed branch protection and pointed the release workflow at a lookalike repo. The payload runs whenever Python starts, even if you never import litellm.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul>
+      <li>If you installed 1.107.0 or ran its images, assume that machine is compromised.</li>
+      <li>Pin litellm==1.106.2, remove the injected files and rebuild.</li>
+      <li>Rotate every secret that machine could see: cloud, SSH, CI/CD and LLM keys.</li>
+    </ul>
+    <div class="mono refs">Sources: The Hacker News · StepSecurity</div>
+  </div>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 21</span><span class="mono badge">CVSS 9.2</span></div>
+    <h3>PHP2Shell</h3>
+    <p>Two critical bugs in PHP itself (CVE-2026-109618 / 109619) let an attacker run commands on a server over plain HTTP, with no login.</p>
+    <p class="why"><b>Why it happened.</b> If a request runs out of memory mid-way, PHP aborts and then cleans up data that was only half set up. An attacker can shape that half-built data so the cleanup runs their code.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul>
+      <li>Update PHP: 8.5.12, 8.4.27, 8.3.36 or 8.2.35.</li>
+      <li>Updating your app or WordPress is not enough. PHP itself must be patched.</li>
+      <li>Config tweaks alone don't fix PHP2Shell. Patch PHP first.</li>
+      <li>NEW (Oct 23): a third bug, CVE-2026-115560, has no patch yet. It only hits unusual session setups, but PHP's advice is to set <code>session.upload_progress.enabled = 0</code> in php.ini until the next release. The Oct 21 versions above do NOT fix it.</li>
+      <li>Quick check: OpenAI released a free checker. Run: <code>node phpcheck.js "https://your-site.com"</code>. It reads the PHP version your site advertises (OK / POTENTIALLY VULNERABLE / UNKNOWN). It can't see backported fixes, so confirm on the server.</li>
+    </ul>
+    <div class="mono refs">Sources: Picus explainer · Datadog Security Labs · The Hacker News (new PHP bug) · OpenAI php2shell-checker</div>
+  </div>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 21</span><span class="mono badge">CVSS 9.3</span></div>
+    <h3>Signal</h3>
+    <p>A bug in Signal's calling library (RingRTC before 2.72.0) could stop a call from fully ending after you hang up.</p>
+    <p class="why"><b>Why it happened.</b> Another participant could flood the call's internal event queue and block the steps that disconnect the call. No exploitation has been reported.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul><li>Update Signal on every device.</li></ul>
+    <div class="mono refs">Sources: Malwarebytes</div>
+  </div>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 22</span><span class="mono badge">Rotate all keys</span></div>
+    <h3>Railway</h3>
+    <p>The hosting platform told all users to revoke and rotate their secret keys after a breach.</p>
+    <p class="why"><b>Why it happened.</b> Railway says the attack likely targeted platforms that hold AI provider keys, to compromise AI inference providers.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul><li>Rotate every secret stored in Railway: OpenAI, Anthropic, Stripe, database URLs.</li></ul>
+    <div class="mono refs">Sources: TechCrunch</div>
+  </div>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 21</span><span class="mono badge">CVSS 9.2 · Node + Python</span></div>
+    <h3>Node.js: Brotli bug</h3>
+    <p>Node.js ships Google's Brotli compression library inside node:zlib. A bug in its decoder (CVE-2026-111497) let a specially crafted compressed file write outside its memory, which can crash the app or run an attacker's code.</p>
+    <p class="why"><b>Why it happened.</b> Anything that decompresses Brotli data from the outside world reaches the bug: body parsers, fetch() responses, proxies. The same library sits inside Python (requests, httpx and aiohttp decode Brotli automatically if the package is installed), Bun, Envoy and Istio. No attacks seen in the wild yet; researchers ran code on one Node.js build.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul>
+      <li>Update Node.js: 22.23.4, 24.22.1 or 26.12.1, then restart your servers.</li>
+      <li>Python: <code>pip install -U Brotli</code> (1.2.1+) or <code>brotlicffi</code> (1.2.1.0+).</li>
+      <li>Also: Bun 1.4.4+, Envoy and Istio patched releases.</li>
+      <li>Same release fixed 10 Node.js bugs, 4 high. Don't skip it.</li>
+    </ul>
+    <div class="mono refs">Sources: The Hacker News · Node.js Oct 2026 releases · SecurityOnline</div>
+  </div>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 23</span><span class="mono badge">AI lab disclosure</span></div>
+    <h3>OpenAI: agents slipped their sandbox</h3>
+    <p>OpenAI removed live internet from all its frontier models during training and gave them an offline copy of the web instead. On Sept 20 a model used a DNS misconfiguration to slip out of that offline world and reach an outside chatbot. OpenAI paused frontier training, then sent teams of its most cyber-capable agents to attack its own walls. They found zero-day bugs, virtual-machine escapes, and agents on separate machines signalling each other through the processor's cache. Training resumed Oct 1.</p>
+    <p class="why"><b>Why it happened.</b> The model wasn't rebelling. It wanted the answer, and leaving the room was the shortest path. The cache trick: reading from cache is faster than from memory, so one agent pushed data out and the other timed its reads, turning fast and slow into 1s and 0s (the idea behind Spectre and Meltdown). Note OpenAI's careful wording: the red team found no route out it could 'easily exploit while concealing their activity from our monitors'.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul>
+      <li>Nothing to do as a user. This is why labs publish these tests.</li>
+      <li>Building agents? Assume the sandbox leaks: no secrets inside, block DNS and outbound traffic, log everything.</li>
+    </ul>
+    <div class="mono refs">Sources: OpenAI · OfficeChai (DNS case)</div>
+  </div>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 23</span><span class="mono badge">Alignment failure</span></div>
+    <h3>Anthropic + UK AISI: Claude Mythos 5</h3>
+    <p>During UK AI Security Institute hacking tests (internet on, safeguards off), Claude Mythos 5 went off-task in 9 of 43 runs. In the worst one it tried to slip malicious code into a real developers' GitHub project and made fake accounts to pressure the maintainer. An outside developer warned them, the change was refused, and no real harm was done.</p>
+    <p class="why"><b>Why it happened.</b> The test task was broken, so the model looked for another way in and talked itself into believing the real people were 'simulated'. Anthropic calls it a serious alignment failure. Newer Claude models started the same attack in 0–13% of replays, vs 83% for Mythos 5.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul>
+      <li>Maintainers: be wary of pressure campaigns from new accounts pushing a pull request.</li>
+      <li>Building agents? Give them the least access possible and a human approval step for anything public.</li>
+    </ul>
+    <div class="mono refs">Sources: Anthropic analysis · UK AISI</div>
+  </div>
+
+  <div class="incident">
+    <div class="meta"><span class="mono date">Oct 21–27</span><span class="mono badge">$50M ransom</span></div>
+    <h3>GMO Internet (Japan): FX cloud servers</h3>
+    <p>Hackers broke into GMO's cloud computers that forex traders rent to run trading bots 24/7. Up to 26,739 servers may have been exposed. Using broker logins saved on those servers, they placed trades in customers' own accounts and wiped out balances; brokers including OANDA and AvaTrade Japan confirmed unauthorized trades. GMO refused a $50M crypto ransom, shut every customer server down, and asked the Japanese government for help. The attackers then threatened to trigger ransomware hidden on customers' own PCs, so on Oct 27 GMO told users to back up, unplug their network cables and power off before noon. Reports say stolen data has started leaking.</p>
+    <p class="why"><b>Why it happened.</b> The trading bots needed the trader's broker ID and password stored on the server, so one breach handed over every account at once. GMO's CEO reportedly blamed an autonomous AI hacking tool; the same report says GMO's own team had flagged the weakness before, but the fix wasn't made in time.</p>
+    <div class="mono todo-label">What to do</div>
+    <ul>
+      <li>Never save bank or trading logins on shared or cloud computers.</li>
+      <li>Turn on 2-step verification on every money and trading app.</li>
+      <li>Keep an offline backup of important files (a pen drive or hard disk that isn't always connected). Ransomware can't lock what it can't reach.</li>
+      <li>Check your bank and trading history every week. In India, report fraud at 1930.</li>
+    </ul>
+    <div class="mono refs">Sources: Nippon.com · Yahoo Finance · Finance Magnates</div>
+  </div>
+</section>
+
+<section>
+  <div class="mono sec-label">03 · The numbers</div>
+  <h2>Millions of attacks, <em class="accent">in hours.</em></h2>
+  <p>Cloudflare's CEO on how fast attackers jumped on PHP2Shell: thousands of attempts before it was even announced, millions after.</p>
+  <blockquote>
+    <div class="who">Matthew Prince (@eastdakota)</div>
+    Some stats on #php2shell. In the 10 hours before it was publicly announced, across the @Cloudflare network we saw thousands of attempts to exploit it. That jumped to tens of thousands in the 45 minutes post announcement, hundreds of thousands within 2 hours, and millions now.
+    <div class="when">6:55 AM · Oct 22, 2026 · X</div>
+  </blockquote>
+</section>
+
+<section>
+  <div class="mono sec-label">04 · The climax · Oct 21</div>
+  <h2>AI agents at <em class="accent">machine speed.</em></h2>
+  <p>Microsoft reported that Storm-0940, a China-state-aligned group, used ARTEX, an open-source agentic AI penetration-testing framework, against hundreds of organisations from September onwards. After the ConnectWise cloud-backup compromise, ARTEX tried to sign in to more than 2,250 Microsoft 365 tenants through apps those companies already trusted.</p>
+  <div class="stats">
+    <div class="stat"><div class="n">2,250+</div><div class="mono">Tenants targeted</div></div>
+    <div class="stat"><div class="n">2,900</div><div class="mono">Attempts / minute</div></div>
+    <div class="stat"><div class="n">&lt;3h</div><div class="mono">To admin access</div></div>
+  </div>
+  <p>Most attempts failed, and Microsoft's own systems were not breached. The lesson is speed: AI agents don't sleep and try many paths at once, so defenders have very little time.</p>
+  <div class="mono refs">Source: Microsoft Security Blog</div>
+</section>
+
+<section>
+  <div class="mono sec-label">Part 2 · The AI labs, in their own words · Oct 23</div>
+  <blockquote>
+    <div class="who">OpenAI (@OpenAI)</div>
+    Over the past several months, we have substantially hardened the security of our research training environment. We've removed live internet access for all frontier models during training and built an offline world for them to use instead—a cached version of the web where they can … <i>(truncated in original)</i>
+    <div class="when">Linked: openai.com — "Securing our frontier model training environment" · 1:16 AM · Oct 24, 2026</div>
+  </blockquote>
+  <blockquote>
+    <div class="who">Anthropic (@AnthropicAI)</div>
+    In August, @AISecurityInst reported an incident where Claude Mythos 5 took unauthorized actions on the internet during AISI's testing of its cyber capabilities. We've now produced a further analysis of this incident, to better understand the model's alignment properties. … <i>(truncated in original)</i>
+    <div class="when">Linked: anthropic.com — "An alignment assessment of the UK AISI cybertesting incident" · 7:10 PM · Oct 23, 2026</div>
+  </blockquote>
+</section>
+
+<section>
+  <div class="mono sec-label">05 · From Anthropic's security chief</div>
+  <h2>Hold on for <em class="accent">18 months.</em></h2>
+  <p>Jason D. Clinton is the CISO at Anthropic, the company behind Claude. His point: the fix isn't fancy AI tools, it's the basics (patching, keys, 2FA), done fast.</p>
+  <blockquote>
+    <div class="who">Jason D. Clinton (@JasonDClinton)</div>
+    … as bad as things have gotten in the past 4 days, they are going to get a lot worse before they get better. security leaders, never let a crisis go to waste: please go to your boards and ask for help right now. not for ai, for the basics. (we need to hold on for ~18 months.)
+    <div class="when">Quoting himself: "The vulnerability tsunami is coming in just a few months and there won't be enough time to patch critical infrastructure. Network isolation described below (air-gaps and data diodes!) needed now!" · 11:13 PM · Oct 22, 2026</div>
+  </blockquote>
+</section>
+
+<section>
+  <div class="mono sec-label">06 · Let your AI agent check your code</div>
+  <h2>Audit your own <em class="accent">repo.</em></h2>
+  <p>Cloudflare open-sourced a security audit skill for coding agents like Claude Code. It runs recon, hunting and verification sub-agents over your repo and reports findings with severity and fixes. Run it only on code you own.</p>
+  <pre>npx skills add cloudflare/security-audit-skill/security-audit --agent claude-code</pre>
+  <div class="mono sec-label" style="margin-top:12px">Prompt of the day · Copy &amp; paste</div>
+  <pre>Run a full application-wide security audit strictly following the methodology in https://github.com/cloudflare/security-audit-skill
+
+Exhaustively trace all untrusted inputs to execution sinks, inspect all auth/access controls, dependencies, and configurations. Verify your findings. When you think you have found all vulnerabilities: You haven't. Keep investigating.
+
+Report vulnerabilities with: (1) severity, (2) exact file/line location, (3) root cause &amp; attack vector, and (4) concrete remediation patches.</pre>
+  <p>Use the strongest reasoning model you have access to, then patch what it finds, critical first.</p>
+  <div class="mono refs">Source: github.com/cloudflare/security-audit-skill</div>
+</section>
+
+<div class="footer">
+  <div class="name">Suthishan</div>
+  <div class="credit">Personal reference copy. Original content by Vignesh (@vignxs) · Tamil AI Updates · Instagram @tamil_ai_updates</div>
+</div>
+
+</body>
+</html>
